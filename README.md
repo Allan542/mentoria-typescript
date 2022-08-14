@@ -10,38 +10,38 @@ No desafio 4, foi utilizada uma **API** do site [TheçMovieDB](https://www.themo
 
 Segue abaixo alguns screenshots de como ficou (Obs: não foi feito um CSS porque este projeto foi mais para exemplificar requisições utilizando APIs):
 
-## Tela principal do Desafio 4:
+## Tela principal do Desafio 4
   ![Mostrar a tela](./img/print-1.png "Tela Principal")
 
-## Criando uma lista:
+## Criando uma lista
   ![Criando uma lista](./img/print-2.png "Criando uma lista")
   ![Criando uma lista](./img/print-2.1.png "Criando uma lista")
 
-## Adicionando um filme na lista:
+## Adicionando um filme na lista
   ![Adicionando um filme a lista](./img/print-3.png "Adicionando à lista")
   ![Adicionando um filme a lista](./img/print-3.1.png "Adicionando à lista")
 
-## Procurando um filme:
+## Procurando um filme
   ![Procurando um filme](./img/print-4.png "Buscando um filme")
   ![Procurando um filme](./img/print-4.1.png "Buscando um filme")
 
-## Removendo um filme:
+## Removendo um filme
  (Obs: nesse caso, coloquei dois filmes do mesmo, então eu quero remover um deles)
   ![Removendo um filme](./img/print-5.png "Removendo da lista")
   ![Removendo um filme](./img/print-5.1.png "Removendo da lista")
 
-## Limpando a lista:
+## Limpando a lista
   ![Limpando a lista](./img/print-6.png "Limpando a lista toda")
   ![Limpando a lista](./img/print-6.1.png "Limpando a lista toda")
   ![Limpando a lista](./img/print-6.2.png "Limpando a lista toda")
   ![Limpando a lista](./img/print-6.3.png "Limpando a lista toda")
 
-## Deletando a lista:
+## Deletando a lista
   ![Deletando a lista](./img/print-7.png "Excluindo a lista")
   ![Deletando a lista](./img/print-7.1.png "Excluindo a lista")
-  ### Erro que dá ao deletar a lista:
+  ### Erro que dá ao deletar a lista
   ![Erro deletando a lista](./img/print-7.2.png "Erro mostrado ao deletar a lista")
-  ### A lista foi deletada mesmo com esse erro:
+  ### A lista foi deletada mesmo com esse erro
   ![Lista deletada mesmo assim](./img/print-7.3.png "Lista deletada mesmo com o erro")
   ![Lista deletada mesmo assim](./img/print-7.4.png "Lista deletada mesmo com o erro")
 
