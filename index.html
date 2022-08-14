@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #lista-criada li{
+      font-size: 16px;
+      font-weight: normal;
+    }
+    button {
+      cursor: pointer;
+    }
+    button:disabled{
+      cursor: initial;
+    }
+  </style>
+  <script src="./dist/app.js" defer></script>
+</head>
+<body>
+  <div style="display: flex; justify-content: space-around;">
+    <div style="display: flex; width: 300px; height: 100px; justify-content: space-between; flex-direction: column;">
+        <input id="login" placeholder="Login" onchange="preencherLogin(event)">
+        <input id="senha" placeholder="Senha" type="password" onchange="preencherSenha(event)">
+        <input id="api-key" placeholder="Api Key" onchange="preencherApi(event)">
+        <button id="login-button" disabled>Login</button>
+    </div>
+
+    <div id="search-container" style="margin-left: 20px;">
+        <input id="search" placeholder="Escreva...">
+        <button id="search-button">Pesquisar Filme</button>
+    </div>
+  </div>
+
+  <div id="lista-container" style="display: flex; align-items: center;" hidden>
+    <div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;">
+      <div style="display: flex; width: 300px; height: 150px; justify-content: space-between; flex-direction: column; margin-top: 50px;">
+        <div>
+          <input type="radio" name="criar-mostrar-opc" id="opc-criar-lista" checked value="Criar lista" onchange="selectOptionList()">Criar lista
+          <input type="radio" name="criar-mostrar-opc" id="opc-mostrar-lista" value="Mostrar lista" onchange="selectOptionList()">Mostrar lista
+        </div>
+        <input type="text" id="campo-nome-lista" onchange="preencherNomeLista(event)" placeholder="Nome da lista de filmes..." hidden>
+        <input type="text" id="campo-descricao-lista" onchange="preencherDescricaoLista(event)" placeholder="Descrição da lista de filmes..." hidden>
+        <button id="criar-lista" disabled hidden>Criar lista</button>
+        
+        <input type="text" id="campo-id-mostra-lista" onchange="preencherIdMostraLista(event)" placeholder="Insira o ID da lista que deseja mostrar..." hidden>
+        <button id="mostrar-lista" disabled hidden>Mostrar lista</button>
+        <p id="resposta-lista"></p>
+      </div>
+  
+      <div style="display: flex; flex-direction: column; width: 300px; height: 150px; justify-content: space-between;">
+        <div>
+          <input type="radio" name="opc-lista" id="add-movie" value="Adicionar filme" checked onchange="selectOptionMovie()">Adicionar filme
+          <input type="radio" name="opc-lista" id="rm-movie" value="Remover filme" onchange="selectOptionMovie()">Remover filme
+        </div>
+        <input type="text" id="busca-movie-id" placeholder="Insira o id do filme que você obteve na busca..." onchange="preencherFilmeId(event)">
+        <button id="movie-button" disabled></button>
+        <button id="clear-list-button">Limpar lista</button>
+      </div>
+  
+      <div style="display: flex; flex-direction: column; width: 300px; height: 50px; justify-content: space-between; margin-top: 50px;">
+        <input type="text" id="busca-lista-id" placeholder="Insira o id da lista que deseja deletar..." onchange="preencherBuscaListaId(event)">
+        <button id="del-list-button" disabled>Deletar lista</button>
+      </div>
+    </div>
+
+    <div id="lista-criada" style="margin-left: 50px;">
+      <h2 id="id-lista"></h2>
+      <p id="descricao-lista" style="max-inline-size: 500px"></p>
+    </div>
+  </div>
+</body>
+</html>
