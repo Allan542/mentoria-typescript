@@ -168,7 +168,7 @@ function validateLoginButton() {
 // Função para mostrar opções de lista
 function habilitaCriarLista(validaAcesso: boolean){
   if (validaAcesso) {
-    listaContainer.hidden = false
+    listaContainer.style.visibility = "initial"
   }
 }
 
@@ -367,15 +367,19 @@ async function autenticaRequestToken () {
 }
 
 async function logar() {
-  await HttpClient.get({
-    url: `https://api.themoviedb.org/3/authentication/token/validate_with_login?api_key=${apiKey}`,
-    method: "POST",
-    body: {
-      username: `${username}`,
-      password: `${password}`,
-      request_token: `${requestToken}`
-    }
-  })
+  try {
+    await HttpClient.get({
+      url: `https://api.themoviedb.org/3/authentication/token/validate_with_login?api_key=${apiKey}`,
+      method: "POST",
+      body: {
+        username: `${username}`,
+        password: `${password}`,
+        request_token: `${requestToken}`
+      }
+    })
+  } catch {
+    alert("Não foi possível efetuar o login")
+  }
 }
 
 async function criarSessao() {
@@ -384,7 +388,10 @@ async function criarSessao() {
     method: "POST"
   })
   sessionId = result.session_id
-  if (sessionId) autenticado = true
+  if (sessionId) {
+    autenticado = true
+    alert("Login feito com sucesso")
+  }
   console.log('Sessão: ', sessionId)
 }
 

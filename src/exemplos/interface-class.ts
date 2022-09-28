@@ -2,7 +2,8 @@
 
 interface Teste {
   nome: string,
-  idade: number
+  idade: number,
+  dizerNome(): void
 }
 
 class Mamifero {
@@ -25,6 +26,9 @@ const cachorro = new Mamifero(4, true, 'Billy')
 cachorro.temPelos
 
 const object: Teste = {
-  nome: 'string',
-  idade: 212312
+  nome: "Allan",
+  idade: 212312,
+  dizerNome() {
+    console.log("Meu nome é ", this.nome)
+  },
 }
